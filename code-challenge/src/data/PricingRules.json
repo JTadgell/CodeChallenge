@@ -1,0 +1,57 @@
+[
+  {
+    "customer": 0,
+    "name": "default",
+    "adPrices": {
+      "classic": 269.99,
+      "standout": 322.99,
+      "premium": 394.99
+    },
+    "adDeals": {
+      "classic": {
+        "amount": 1,
+        "for": 1
+      },
+      "standout": {
+        "amount": 1,
+        "for": 1
+      },
+      "premium": {
+        "amount": 1,
+        "for": 1
+      }
+    }
+  },
+  {
+    "customerId": 1,
+    "name": "SecondBite",
+    "adPrices": {},
+    "adDeals": {
+      "classic": {
+        "amount": 3,
+        "for": 2
+      }
+    }
+  },
+  {
+    "customerId": 2,
+    "name": "Axil Coffee Roasters",
+    "adPrices": {
+      "standout": 299.99
+    },
+    "adDeals": {}
+  },
+  {
+    "customerId": 3,
+    "name": "MYER",
+    "adPrices": {
+      "premium": 389.99
+    },
+    "adDeals": {
+      "standout": {
+        "amount": 5,
+        "for": 4
+      }
+    }
+  }
+]
