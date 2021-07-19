@@ -8,7 +8,7 @@ defaultCheckOut.add(Item.ClassicAd);
 defaultCheckOut.add(Item.StandoutAd);
 defaultCheckOut.add(Item.PremiumAd);
 
-console.log(defaultCheckOut.total());
+console.log(`Default scenario total: $${defaultCheckOut.total()}`);
 
 var pricingRulesService = new LocalPricingRulesService();
 
@@ -20,7 +20,7 @@ secondBiteCheckout.add(Item.ClassicAd);
 secondBiteCheckout.add(Item.ClassicAd);
 secondBiteCheckout.add(Item.PremiumAd);
 
-console.log(secondBiteCheckout.total());
+console.log(`SecondBite scenario total: $${secondBiteCheckout.total()}`);
 
 // Run for axil coffee roasters
 let axilRules = pricingRulesService.getPricingRulesById(2);
@@ -30,4 +30,4 @@ axilCheckout.add(Item.StandoutAd);
 axilCheckout.add(Item.StandoutAd);
 axilCheckout.add(Item.PremiumAd);
 
-console.log(axilCheckout.total());
+console.log(`Axil Coffee Roasters scenario total: $${axilCheckout.total()}`);
