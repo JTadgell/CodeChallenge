@@ -4,6 +4,22 @@ import { Item } from "../../src/models/Item";
 
 describe("checkoutAds", () => {
   let samplePricingRules = new PricingRules();
+  samplePricingRules.classicMoreThanDeal = 2;
+  samplePricingRules.classicMoreThanDealPrice = 249.99;
+
+  let co = new Checkout(samplePricingRules);
+  co.add(Item.ClassicAd);
+  co.add(Item.ClassicAd);
+  co.add(Item.ClassicAd);
+  co.add(Item.ClassicAd);
+
+  it("default scenario with classic ads", () => {
+    expect(co.total()).toEqual(999.96);
+  });
+});
+
+describe("checkoutAds", () => {
+  let samplePricingRules = new PricingRules();
   let co = new Checkout(samplePricingRules);
 
   it("returns $0 after with no ads", () => {
@@ -51,5 +67,21 @@ describe("checkoutAds", () => {
 
   it("Axil Coffee Roasters scenario with negotiated price and sample ads", () => {
     expect(co.total()).toEqual(1294.96);
+  });
+});
+
+describe("checkoutAds", () => {
+  let samplePricingRules = new PricingRules();
+  samplePricingRules.classicDeal = [3, 2];
+
+  let co = new Checkout(samplePricingRules);
+  co.add(Item.ClassicAd);
+  co.add(Item.ClassicAd);
+  co.add(Item.ClassicAd);
+  co.add(Item.ClassicAd);
+  co.add(Item.PremiumAd);
+
+  it("SecondBite scenario with negotiated deal and sample ads", () => {
+    expect(co.total()).toEqual(934.97 + 269.99);
   });
 });

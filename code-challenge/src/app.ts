@@ -31,3 +31,21 @@ axilCheckout.add(Item.StandoutAd);
 axilCheckout.add(Item.PremiumAd);
 
 console.log(`Axil Coffee Roasters scenario total: $${axilCheckout.total()}`);
+
+// Run for axil coffee roasters
+let randRules = pricingRulesService.getPricingRulesById(9999);
+let randCheckout = new Checkout(randRules);
+randCheckout.add(Item.ClassicAd);
+randCheckout.add(Item.StandoutAd);
+randCheckout.add(Item.PremiumAd);
+
+console.log(`Rand scenario total: $${randCheckout.total()}`);
+
+// Run for MYER
+let myerRules = pricingRulesService.getPricingRulesById(3);
+let myerCheckout = new Checkout(myerRules);
+myerCheckout.add(Item.ClassicAd);
+myerCheckout.add(Item.ClassicAd);
+myerCheckout.add(Item.ClassicAd);
+
+console.log(`MYER scenario total: $${myerCheckout.total()}`);

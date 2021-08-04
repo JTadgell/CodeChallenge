@@ -1,6 +1,6 @@
 [
   {
-    "customer": 0,
+    "customerId": 0,
     "name": "default",
     "adPrices": {
       "classic": 269.99,
@@ -20,6 +20,12 @@
         "amount": 1,
         "for": 1
       }
+    },
+    "adMoreThanDeals": {
+      "classic": {
+        "amount": 2,
+        "price": 249.99
+      }
     }
   },
   {
@@ -31,6 +37,12 @@
         "amount": 3,
         "for": 2
       }
+    },
+    "adMoreThanDeals": {
+      "classic": {
+        "amount": 2,
+        "price": 249.99
+      }
     }
   },
   {
@@ -39,7 +51,13 @@
     "adPrices": {
       "standout": 299.99
     },
-    "adDeals": {}
+    "adDeals": {},
+    "adMoreThanDeals": {
+      "classic": {
+        "amount": 2,
+        "price": 249.99
+      }
+    }
   },
   {
     "customerId": 3,
@@ -51,6 +69,12 @@
       "standout": {
         "amount": 5,
         "for": 4
+      }
+    },
+    "adMoreThanDeals": {
+      "classic": {
+        "amount": 2,
+        "price": 249.99
       }
     }
   }
